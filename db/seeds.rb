@@ -118,15 +118,17 @@ OfferTarget.create(offer_id: 2,
     gender_id: (n % 3) + 1
   )
 
-  device = Device.create(
-    model: Faker::Device.model_name,
-    operating_system_id: n % 2 == 0 ? 1 : 2,
-    os_major_version: n % 20,
-    os_minor_version: 1,
-    os_patch_version:Faker::Device.version,
-    locale_id: (n % 2) + 1,
-    player_id: player.id
-  )
+  if (n % 5 != 0) # not every player will start with a device
+    device = Device.create(
+      model: Faker::Device.model_name,
+      operating_system_id: n % 2 == 0 ? 1 : 2,
+      os_major_version: n % 20,
+      os_minor_version: 1,
+      os_patch_version:Faker::Device.version,
+      locale_id: (n % 2) + 1,
+      player_id: player.id
+    )
+  end
 end
 
 Faker::Number.within(range: 1..10)
