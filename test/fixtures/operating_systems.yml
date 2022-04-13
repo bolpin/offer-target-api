@@ -1,0 +1,9 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+android:
+  id: 1
+  name: android
+
+ios:
+  id: 2
+  name: ios

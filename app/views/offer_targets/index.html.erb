@@ -1,0 +1,40 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Offer targets</h1>
+
+<p>
+<!--   Total payout (ages 15-25): <strong> <%= OfferTarget.total_payout(15, 25) %></strong> -->
+<!-- <br/> -->
+<!--   Total payout (ages 30-40): <strong> <%= OfferTarget.total_payout(30, 40) %></strong> -->
+<!-- <br/> -->
+  Total payout (ages 14-100): <strong> <%= OfferTarget.total_payout(14, 100) %></strong>
+</p>
+
+<p>
+<!--
+  IOS device count between version range: <%= @min_version %> - <%= @max_version %>: <strong> <%= @ios_count %> </strong>
+<br/>
+-->
+  Android device count between version range: <%= @min_version %> - <%= @max_version %>: <strong> <%= @android_count %> </strong>
+</p>
+
+<%= link_to "New offer target", new_offer_target_path %>
+
+<div id="offer_targets">
+  <table>
+    <tr>
+      <th>Offer</th>
+      <th>Player age</th>
+      <th>Operating system</th>
+      <th>Minimum OS version</th>
+      <th>Locale</th>
+      <th>Gender</th>
+      <th></th>
+      <th></th>
+    </tr>
+
+    <% @offer_targets.each do |offer_target| %>
+      <%= render "offer_target_table_row", item: offer_target %>
+    <% end %>
+  </table>
+</div>

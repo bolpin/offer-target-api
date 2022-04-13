@@ -1,0 +1,86 @@
+<%= form_with(model: offer_target) do |form| %>
+  <% if offer_target.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(offer_target.errors.count, "error") %> prohibited this offer_target from being saved:</h2>
+
+      <ul>
+        <% offer_target.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :offer_id, style: "display: block" %>
+    <%= form.collection_select(:offer_id,
+                              Offer.all,
+                              :id,
+                              :title,
+                              { :prompt => 'Select',
+                                :selected => offer_target.operating_system_id
+                              }, { class: 'form-control' }) %>
+  </div>
+
+  <div>
+    <%= form.label :min_player_age, style: "display: block" %>
+    <%= form.number_field :min_player_age %>
+  </div>
+
+  <div>
+    <%= form.label :max_player_age, style: "display: block" %>
+    <%= form.number_field :max_player_age %>
+  </div>
+
+  <div>
+    <%= form.label :operating_system_id, style: "display: block" %>
+    <%= form.collection_select(:operating_system_id,
+                              OperatingSystem.all,
+                              :id,
+                              :name,
+                              { :prompt => 'Select',
+                                :selected => offer_target.operating_system_id
+                              }, { class: 'form-control' }) %>
+  </div>
+
+  <div>
+    <%= form.label :min_os_major_version, style: "display: block" %>
+    <%= form.number_field :min_os_major_version %>
+  </div>
+
+  <div>
+    <%= form.label :min_os_minor_version, style: "display: block" %>
+    <%= form.number_field :min_os_minor_version %>
+  </div>
+
+  <div>
+    <%= form.label :min_os_patch_version, style: "display: block" %>
+    <%= form.number_field :min_os_patch_version %>
+  </div>
+
+  <div>
+    <%= form.label :locale_id, style: "display: block" %>
+    <%= form.collection_select(:locale_id,
+                              Locale.all,
+                              :id,
+                              :code,
+                              { :prompt => 'Select',
+                                :selected => offer_target.locale_id
+                              }, { class: 'form-control' }) %>
+  </div>
+
+  <div>
+    <%= form.label :gender_id, style: "display: block" %>
+    <%= form.collection_select(:gender_id,
+                              Gender.all,
+                              :id,
+                              :name,
+                              { :prompt => 'Select',
+                                :selected => offer_target.gender_id
+                              }, { class: 'form-control' }) %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

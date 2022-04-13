@@ -1,0 +1,22 @@
+<h2>Device</h2>
+<%= player_form.fields_for :device do |device_form| %>
+  <div>
+    <%= device_form.label :model, style: "display: block" %>
+    <%= device_form.text_field :model %>
+  </div>
+
+  <div>
+    <%= device_form.label "Operating System", style: "display: block" %>
+    <%= device_form.text_field :os %>
+  </div>
+
+  <div>
+    <%= device_form.label "Operating System Version", style: "display: block" %>
+    <%= device_form.text_field :version %>
+  </div>
+
+  <div>
+    <%= device_form.label :locale, style: "display: block" %>
+    <%= device_form.text_field :locale %>
+  </div>
+<% end %>

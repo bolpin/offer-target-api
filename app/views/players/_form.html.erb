@@ -1,0 +1,81 @@
+<%= form_with(model: @player) do |form| %>
+  <% if @player.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(player.errors.count, "error") %> prohibited this player from being saved:</h2>
+
+      <ul>
+        <% @player.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :first_name, style: "display: block" %>
+    <%= form.text_field :first_name %>
+  </div>
+
+  <div>
+    <%= form.label :last_name, style: "display: block" %>
+    <%= form.text_field :last_name %>
+  </div>
+
+  <div>
+    <%= form.label :birthdate, style: "display: block" %>
+    <%= form.date_field :birthdate %>
+  </div>
+
+  <div>
+    <%= form.label :gender_id, style: "display: block" %>
+    <%= form.collection_select(:gender_id,
+                               Gender.all,
+                               :id,
+                               :name,
+                               { :prompt => 'Gender',
+                                 :selected => player.gender_id
+                               }, { class: 'form-control' }) %>
+  </div>
+  <h3>Device</h3>
+  <%= form.fields_for :device do |subform| %>
+    <%# if subform.object.persisted? %>
+      <%#= subform.check_box :_destroy %>
+      <%#= subform.label :_destroy, "Delete this device" %>
+    <%# end %>
+
+    <div>
+      <%= subform.label :model, style: "display: block" %>
+      <%= subform.text_field :model %>
+    </div>
+
+    <div>
+      <%= subform.label "Operating System", style: "display: block" %>
+      <%= subform.collection_select(:operating_system_id,
+                                OperatingSystem.all,
+                                :id,
+                                :name,
+                                { :prompt => 'Operating system',
+                                  :selected => player.device.operating_system_id
+                                }, { class: 'form-control' }) %>
+    </div>
+
+    <div>
+      <%= subform.label "Operating System Version", style: "display: block" %>
+      <%= subform.text_field :os_version %>
+    </div>
+
+    <div>
+      <%= subform.label :locale, style: "display: block" %>
+      <%= subform.collection_select(:locale_id,
+                                Locale.all,
+                                :id,
+                                :code,
+                                { :prompt => 'Locale',
+                                  :selected => player.device.locale_id
+                                }, { class: 'form-control' }) %>
+    </div>
+  <% end %>
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

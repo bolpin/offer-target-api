@@ -1,0 +1,17 @@
+<p class='offer_target'>
+  <%= render @offer_target %>
+</p>
+
+<%= link_to "Back to offer targets", offer_targets_path %>
+
+
+<h2>Matching Players</h2>
+<% @players.each do |player| %>
+  <%= player.id %>
+  <%= render player %>
+  <p>
+    <%= link_to "Show this player", player %>
+  </p>
+<% end %>
+
+

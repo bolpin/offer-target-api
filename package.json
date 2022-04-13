@@ -1,0 +1,16 @@
+{
+  "name": "friday_challenge",
+  "private": true,
+  "dependencies": {
+    "@hotwired/turbo-rails": "^7.1.1",
+    "esbuild": "^0.14.29",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-icons": "^4.3.1",
+    "uuid": "^8.3.2"
+  },
+  "scripts": {
+    "build": "esbuild --bundle app/javascript/application.js --outfile=app/assets/javascripts/application.js --loader:.js=jsx",
+    "watch": "esbuild --watch --bundle app/javascript/application.js --outfile=app/assets/javascripts/application.js --loader:.js=jsx"
+  }
+}

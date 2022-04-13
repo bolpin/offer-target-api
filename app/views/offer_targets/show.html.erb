@@ -1,0 +1,13 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @offer_target %>
+
+<div>
+  <%= link_to "Edit this offer target", edit_offer_target_path(@offer_target) %> |
+  <%= link_to "Back to offer targets", offer_targets_path %>
+
+  <%= button_to "Destroy this offer target", @offer_target, method: :delete, prompt: true %>
+
+  <%= link_to "Show matching users", offer_target_players_path(@offer_target) %>
+
+</div>

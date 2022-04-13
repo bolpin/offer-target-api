@@ -1,0 +1,20 @@
+<div id="<%= dom_id offer %>">
+  <p>
+    <strong>
+      <%= offer.title %> - <%= offer.header %>
+    </strong>
+  </p>
+
+  <p>
+    <%= offer.description %>
+  </p>
+
+  <p>
+    <strong>Points:</strong>
+    <%= offer.points %>
+    |
+    <strong>Payout:</strong>
+    <%= humanized_money_with_symbol offer.payout %>
+  </p>
+
+</div>

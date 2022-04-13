@@ -1,0 +1,35 @@
+<tr id="<%= dom_id item %>">
+  <td>
+    <%= item.offer.title %>
+  </td>
+
+  <td>
+    <%= item.min_player_age %> - <%= item.max_player_age %>
+  </td>
+
+  <td>
+    <%= item.operating_system.name if item.operating_system %>
+  </td>
+
+  <td>
+    <%= item.min_os_major_version %>.<%= item.min_os_minor_version %>.<%= item.min_os_patch_version %>
+  </td>
+
+  <td>
+    <%= item.locale.code %>
+  </td>
+
+  <td>
+    <%= item.gender.name %>
+  </td>
+
+  <td>
+    <%= link_to "Show", item %>
+  </td>
+
+  <td>
+    <%= link_to "Matching users", offer_target_players_path(item) %>
+  </td>
+
+</tr>
+

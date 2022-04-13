@@ -1,0 +1,79 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+# one non-android phone, one non-en_US phone
+# the rest are android, en_US
+# os versions are different
+
+one:
+  id: 1
+  model: non-android
+  operating_system_id: 2
+  os_major_version: 1
+  os_minor_version: 0
+  os_patch_version: 9
+  locale_id: 1
+  player_id: 1
+
+two:
+  id: 2
+  model: non-en_us
+  operating_system_id: 1
+  os_major_version: 1
+  os_minor_version: 0
+  os_patch_version: 10
+  locale_id: 2
+  player_id: 2
+
+three:
+  id: 3
+  model: android-en_us
+  operating_system_id: 1
+  os_major_version: 2
+  os_minor_version: 0
+  os_patch_version: 0
+  locale_id: 1
+  player_id: 3
+
+four:
+  id: 4
+  model: android-en_us
+  operating_system_id: 1
+  os_major_version: 2
+  os_minor_version: 1
+  os_patch_version: 0
+  locale_id: 1
+  player_id: 4
+
+five:
+  id: 5
+  model: android-en_us
+  operating_system_id: 1
+  os_major_version: 2
+  os_minor_version: 1
+  os_patch_version: 0
+  locale_id: 1
+  player_id: 5
+
+six:
+  id: 6
+  model: android-en_us
+  operating_system_id: 1
+  os_major_version: 2
+  os_minor_version: 1
+  os_patch_version: 0
+  locale_id: 1
+  player_id: 6
+
+seven:
+  id: 7
+  model: android-en_us
+  operating_system_id: 1
+  os_major_version: 2
+  os_minor_version: 1
+  os_patch_version: 0
+  locale_id: 1
+  player_id: 7
+
+
+
+

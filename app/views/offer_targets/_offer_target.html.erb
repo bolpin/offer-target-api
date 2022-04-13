@@ -1,0 +1,32 @@
+<div id="<%= dom_id offer_target %>">
+  <p>
+    <strong>Offer:</strong>
+    <%= offer_target.offer.title %>
+  </p>
+
+  <p>
+    <strong>Player age:</strong>
+    <%= offer_target.min_player_age %> - <%= offer_target.max_player_age %>
+  </p>
+
+  <p>
+    <strong>Operating system:</strong>
+    <%= offer_target.operating_system.name if offer_target.operating_system %>
+  </p>
+
+  <p>
+    <strong>Minimum OS version:</strong>
+    <%= offer_target.min_os_major_version %>.<%= offer_target.min_os_minor_version %>.<%= offer_target.min_os_patch_version %>
+  </p>
+
+  <p>
+    <strong>Locale:</strong>
+    <%= offer_target.locale.code %>
+  </p>
+
+  <p>
+    <strong>Gender:</strong>
+    <%= offer_target.gender.name %>
+  </p>
+
+</div>

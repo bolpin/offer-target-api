@@ -1,0 +1,41 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id: 1
+  title: Offer 2 cents
+  header: Big Money!
+  description: MyText
+  points: 2000
+  payout_cents: 2
+
+two:
+  id: 2
+  title: Offer 3 cents
+  header: Big Money!
+  description: MyText
+  points: 2000
+  payout_cents: 3
+
+three:
+  id: 3
+  title: Offer 5 cents
+  header: Big Money!
+  description: MyText
+  points: 2000
+  payout_cents: 5
+
+four:
+  id: 4
+  title: Offer 7 cents
+  header: Big Money!
+  description: MyText
+  points: 2000
+  payout_cents: 7
+
+five:
+  id: 5
+  title: Offer 11 cents
+  header: Big Money!
+  description: MyText
+  points: 2000
+  payout_cents: 11

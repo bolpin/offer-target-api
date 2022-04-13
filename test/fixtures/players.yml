@@ -1,0 +1,53 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+baz:
+  id: 1
+  first_name: Baz
+  last_name: Who
+  birthdate: 1980-03-25
+  gender_id: 1
+
+suz:
+  id: 2
+  first_name: Suz
+  last_name: Who
+  birthdate: 1980-03-25
+  gender_id: 1
+
+reba:
+  id: 3
+  first_name: Reba
+  last_name: Who
+  birthdate: 1980-03-25
+  gender_id: 1
+
+maria:
+  id: 4
+  first_name: Maria
+  last_name: Who
+  birthdate: 1980-03-25
+  gender_id: 1
+
+cordelia:
+  id: 5
+  first_name: Cordelia
+  last_name: Who
+  birthdate: 1980-03-25
+  gender_id: 1
+
+# older
+cindy-lou:
+  id: 6
+  first_name: Cindy-Lou
+  last_name: Who
+  birthdate: 1970-03-25
+  gender_id: 1
+
+# male
+haru:
+  id: 7
+  first_name: Haru
+  last_name: Who
+  birthdate: 1980-03-25
+  gender_id: 2
+
