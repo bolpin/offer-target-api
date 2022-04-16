@@ -1,6 +1,12 @@
 class PlayersController < ApplicationController
   before_action :set_player, only: %i[ show edit update destroy ]
 
+  # before_action :sleep_for_three
+
+  def sleep_for_three
+    sleep(3)
+  end
+
   # GET /players or /players.json
   def index
     @players = Player.includes(:gender).all

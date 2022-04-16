@@ -3,8 +3,13 @@ require 'utils'
 class DeviceCountController < ApplicationController
   include Utils
 
+  # before_action :sleep_for_three
+
+  def sleep_for_three
+    sleep(3)
+  end
+
   def index
-    # sleep(1)
     # render :status => 404
     # return
     @os = params[:os] || 'android'
