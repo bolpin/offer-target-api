@@ -89,4 +89,4 @@ production:
   <<: *default
   database: challenge_project_production
   username: challenge_project
-  password: <%= ENV["CHALLENGE_PROJECT_DATABASE_PASSWORD"] %>
+  password:
